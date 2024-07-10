@@ -1,6 +1,6 @@
-const express = require("express");
+import express from "express";
 const app = express();
-const pool = require("./db");
+import { pool } from "./db.js";
 const port = 5000;
 
 app.listen(port, () => console.log("Listening..."));
@@ -39,6 +39,20 @@ app.post("/product/add", async (req, res) => {
 
     res.send(body);
     console.log(body);
+  } catch (err) {
+    console.error(err.message);
+  }
+});
+
+app.delete("/product/delete", async (req, res) => {
+  try {
+    const body = req.body;
+    console.log(body.length);
+    for (let i = 0; i < body.length; i++) {
+      await pool.query(`DELETE FROM products WHERE id = $1;`, [body[i]]);
+      console.log(`You've successfully deleted a product.`);
+    }
+    res.send(body);
   } catch (err) {
     console.error(err.message);
   }

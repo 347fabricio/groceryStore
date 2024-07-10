@@ -2,6 +2,7 @@
   "name": "grocerystore",
   "version": "1.0.0",
   "main": "endpoint.js",
+  "type": "module",
   "devDependencies": {},
   "scripts": {
     "dev": "nodemon endpoint.js",

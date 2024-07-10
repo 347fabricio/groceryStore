@@ -23,8 +23,9 @@ CREATE TABLE products (
   madeBy VARCHAR(31) NOT NULL,
   madeOn date NOT NULL,
   expiresOn date NOT NULL,
-  categoryID int REFERENCES category (id) 
+  description VARCHAR(31) NOT NULL
 );
 
 INSERT INTO products (name, price, unit, quantity, purchaseData, madeBy, madeOn, expiresOn, description) VALUES ('Açúcar', 6.79, 'KG', 9, '2024-07-05', 'União', '2024-02-28', '2025-02-28', 'Açúcar demarara');
 
+DELETE FROM products WHERE id = x;

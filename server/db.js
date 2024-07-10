@@ -1,6 +1,8 @@
-const Pool = require("pg").Pool;
+// const Pool = require("pg").Pool;
+import pg from "pg";
+const { Pool } = pg;
 
-const pool = new Pool({
+export const pool = new Pool({
   user: "postgres",
   password: "lunga347",
   database: "grocery_store",
@@ -9,4 +11,4 @@ const pool = new Pool({
   encoding: "utf8",
 });
 
-module.exports = pool;
+// module.exports = pool;
