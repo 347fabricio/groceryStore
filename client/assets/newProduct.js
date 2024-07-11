@@ -9,6 +9,8 @@ export const newProduct = () => {
     if (toggleDataSender) {
       container.classList.add("dataSenderOpened");
       createDataSenderWindow();
+      closeWindow();
+      sendData();
     } else {
       container.classList.remove("dataSenderOpened");
       document.querySelector(".dataSender").remove();
@@ -16,7 +18,7 @@ export const newProduct = () => {
   });
 };
 
-const createDataSenderWindow = () => {
+export const createDataSenderWindow = () => {
   const div = document.createElement("div");
   const h1 = document.createElement("h1");
   const hr = document.createElement("hr");
@@ -87,6 +89,7 @@ const createDataSenderWindow = () => {
   purchaseDate.appendChild(purchaseDateSpan);
   purchaseDate.classList.add("inputPurchaseDate");
   createDate(purchaseDate);
+  todaysDate(purchaseDate);
   divDates.append(purchaseDate);
 
   let madeOnSpan = document.createElement("span");
@@ -120,21 +123,38 @@ const createDataSenderWindow = () => {
   descriptionContainer.classList.add("descriptionContainer");
   btnSubmit.classList.add("btnSubmit");
   document.body.append(div);
-
-  closeWindow(closeBtn);
-  sendData();
 };
 
 function createDate(element) {
-  let date = document.createElement("div");
-  createDay(date);
-  createMonth(date);
-  createYear(date);
-  date.classList.add("date");
-  element.append(date);
+  const div = document.createElement("div");
+  createDay(div);
+  createMonth(div);
+  createYear(div);
+  div.classList.add("date");
+  element.append(div);
 }
 
-function createDay(date) {
+function todaysDate(element) {
+  const todaysDateBtn = document.createElement("button");
+  todaysDateBtn.innerText = "HOJE";
+  todaysDateBtn.classList.add("todaysDateBtn");
+
+  todaysDateBtn.addEventListener("click", () => {
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = today.getMonth() + 1;
+    const day = today.getDate();
+    console.log(`${day}-${month}-${year}`);
+
+    document.querySelector(".inputPurchaseDate .day").value = day;
+    document.querySelector(".inputPurchaseDate .month").value = month;
+    document.querySelector(".inputPurchaseDate .year").value = year;
+  });
+
+  element.append(todaysDateBtn);
+}
+
+function createDay(element) {
   let select = document.createElement("select");
   for (let i = 1; i <= 31; i++) {
     let option = document.createElement("option");
@@ -144,10 +164,10 @@ function createDay(date) {
   }
   select.value = "";
   select.classList.add("day");
-  date.append(select);
+  element.append(select);
 }
 
-function createMonth(date) {
+function createMonth(element) {
   let select = document.createElement("select");
   for (let i = 1; i <= 12; i++) {
     let option = document.createElement("option");
@@ -157,10 +177,10 @@ function createMonth(date) {
   }
   select.value = "";
   select.classList.add("month");
-  date.append(select);
+  element.append(select);
 }
 
-function createYear(date) {
+function createYear(element) {
   let select = document.createElement("select");
   for (let i = 2022; i <= 2030; i++) {
     let option = document.createElement("option");
@@ -168,14 +188,13 @@ function createYear(date) {
     option.value = i;
     select.appendChild(option);
   }
-  select.required = "required";
   select.value = "";
   select.classList.add("year");
-  date.append(select);
+  element.append(select);
 }
 
-// =======================
-const closeWindow = (closeBtn) => {
+const closeWindow = () => {
+  const closeBtn = document.querySelector(".closeBtn");
   closeBtn.addEventListener("click", async () => {
     toggleDataSender = !toggleDataSender;
     if (toggleDataSender) {
@@ -271,7 +290,7 @@ const getPurchaseDate = () => {
   let year = date.querySelector(".year").value;
 
   if (day && month && year) {
-    Object.assign(obj, { purchaseDate: `${year}-${month}-${day}` });
+    Object.assign(obj, { purchaseDate: `${month}-${day}-${year}` }); //postgres
   }
 };
 
@@ -282,7 +301,7 @@ const getMadeOn = () => {
   let year = date.querySelector(".year").value;
 
   if (day && month && year) {
-    Object.assign(obj, { madeOn: `${year}-${month}-${day}` });
+    Object.assign(obj, { madeOn: `${month}-${day}-${year}` }); //postgres
   }
 };
 
@@ -293,7 +312,7 @@ const getExpiresOn = () => {
   let year = date.querySelector(".year").value;
 
   if (day && month && year) {
-    Object.assign(obj, { expiresOn: `${year}-${month}-${day}` });
+    Object.assign(obj, { expiresOn: `${month}-${day}-${year}` }); //postgres
   }
 };
 

@@ -23,7 +23,7 @@ const deleteChecked = async (isChecked) => {
   location.reload();
 };
 
-function flashWarning() {
+export function flashWarning() {
   const element = document.querySelectorAll(".row > .id");
   let toggle = true;
 

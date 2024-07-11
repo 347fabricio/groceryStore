@@ -57,3 +57,16 @@ app.delete("/product/delete", async (req, res) => {
     console.error(err.message);
   }
 });
+
+app.put("/product/update/:id", async (req, res) => {
+  try {
+    const { id } = req.params; // ID
+
+    console.log(id);
+    const updateResponse = await pool.query(`SELECT * FROM products WHERE id = $1`, [id]);
+    res.json(updateResponse.rows);
+    console.log(`Updating product id=${id}`);
+  } catch (err) {
+    console.error(err.message);
+  }
+});
