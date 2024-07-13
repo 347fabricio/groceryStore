@@ -14,13 +14,16 @@ export const deleteProduct = () => {
   });
 };
 
-const deleteChecked = async (isChecked) => {
-  const deleteResponse = await fetch(`http://localhost:5000/product/delete`, {
-    method: "DELETE",
-    headers: { "Content-Type": "application/json; charset=utf-8" },
-    body: JSON.stringify(isChecked),
-  });
-  location.reload();
+const deleteChecked = async (isChecked, value) => {
+  let really = confirm(`Você quer excluir este produto?`);
+  if (really) {
+    await fetch(`http://localhost:5000/product/delete`, {
+      method: "DELETE",
+      headers: { "Content-Type": "application/json; charset=utf-8" },
+      body: JSON.stringify(isChecked),
+    });
+    location.reload();
+  }
 };
 
 export function flashWarning() {

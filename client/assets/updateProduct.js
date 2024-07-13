@@ -1,4 +1,5 @@
-import { createDataSenderWindow } from "./newProduct.js";
+import { getEmpty, productDetails } from "./filledChecker.js";
+import { dataSenderWindow } from "./dataSenderWindow .js";
 import { flashWarning } from "./deleteProduct.js";
 
 const updateButton = document.querySelector(".updtProductBtn");
@@ -26,16 +27,16 @@ export const updateProduct = () => {
 };
 
 const updateChecked = async (value) => {
-  const updateResponse = await fetch(`http://localhost:5000/product/update/${value}`, {
-    method: "PUT",
-    headers: { "Content-Type": "application/json; charset=utf-8" },
-    body: JSON.stringify({ id: value }),
+  const takeALook = await fetch(`http://localhost:5000/product/${value}`, {
+    method: "GET",
   });
-  const data = await updateResponse.json();
+  const data = await takeALook.json();
+  console.log(data[0]);
   toggleVisibility();
-  createDataSenderWindow();
+  dataSenderWindow();
   jsonDestructurer(data[0]);
   closeWindow();
+  putData(value);
 };
 
 let toggle = true;
@@ -82,7 +83,6 @@ function destructurePurchaseDate(data) {
     }
   });
 
-  console.log(purchaseDate);
   document.querySelector(".inputPurchaseDate .day").value = purchaseDate[0];
   document.querySelector(".inputPurchaseDate .month").value = purchaseDate[1];
   document.querySelector(".inputPurchaseDate .year").value = purchaseDate[2];
@@ -97,7 +97,6 @@ function destructureMadeOn(data) {
     }
   });
 
-  console.log(purchaseDate);
   document.querySelector(".inputMadeOn .day").value = purchaseDate[0];
   document.querySelector(".inputMadeOn .month").value = purchaseDate[1];
   document.querySelector(".inputMadeOn .year").value = purchaseDate[2];
@@ -112,8 +111,21 @@ function destructureMadeBy(data) {
     }
   });
 
-  console.log(purchaseDate);
   document.querySelector(".inputExpiresOn .day").value = purchaseDate[0];
   document.querySelector(".inputExpiresOn .month").value = purchaseDate[1];
   document.querySelector(".inputExpiresOn .year").value = purchaseDate[2];
 }
+const putData = (value) => {
+  const submitBtn = document.querySelector(".btnSubmit");
+
+  submitBtn.addEventListener("click", async () => {
+    if (getEmpty()) {
+      await fetch(`http://localhost:5000/product/update/${value}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json; charset=utf-8" },
+        body: JSON.stringify(productDetails),
+      });
+      location.reload();
+    }
+  });
+};

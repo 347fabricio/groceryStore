@@ -8,6 +8,7 @@ const getProducts = async () => {
 
 export const setProducts = async () => {
   const table = document.querySelector(".products > tbody");
+
   const columns = [
     "id",
     "name",
@@ -22,64 +23,99 @@ export const setProducts = async () => {
   ];
 
   const products = await getProducts();
-  // console.log(products);
 
-  const formatDate = (i, j) => {
-    let date = new Date(products[i][columns[j]]).toLocaleDateString("pt-BR");
+  for (let row = 0; row < products.length; row++) {
+    const tableRow = table.insertRow();
+    tableRow.classList.add("row");
 
-    return date;
-  };
+    for (let x = 0; x < columns.length; x++) {
+      const cell = tableRow.insertCell();
+      cell.className = columns[x];
 
-  for (let i = 0; i < products.length; i++) {
-    const row = table.insertRow();
-    row.classList.add("row");
-    for (let j = 0; j < columns.length; j++) {
-      const cell = row.insertCell();
-      cell.className = columns[j];
-      switch (j) {
+      switch (x) {
         case 0:
-          cell.innerText = products[i][columns[j]];
-          createCheckbox(cell, products[i][columns[j]]);
+          cell.innerText = products[row][columns[x]];
+          createCheckbox(cell, products[row][columns[x]]);
           break;
         case 2:
-          cell.innerText = `R$ ${products[i][columns[j]]}`;
+          cell.innerText = periodToComma(products[row][columns[x]]);
+          break;
+        case 3:
+          cell.innerText = unitNotation(products[row][columns[x]]);
           break;
         case 5:
-          cell.innerText = formatDate(i, j);
+          cell.innerText = formatDate(products[row][columns[x]]);
           break;
         case 7:
-          cell.innerText = formatDate(i, j);
+          cell.innerText = formatDate(products[row][columns[x]]);
           break;
         case 8:
-          cell.innerText = formatDate(i, j);
+          cell.innerText = formatDate(products[row][columns[x]]);
           break;
         case 9:
-          cell.innerText = get2First(cell, products[i][columns[j]]);
+          cell.innerText = get2First(cell, products[row][columns[x]]);
           break;
         default:
-          cell.innerText = products[i][columns[j]];
+          cell.innerText = products[row][columns[x]];
       }
     }
   }
+  orderID();
 };
 
-function createCheckbox(element, value) {
+function orderID() {
+  const rows = document.querySelectorAll(".row > .id");
+  const sortUps = document.querySelectorAll(".sortUp");
+
+  sortUps.forEach((element, index) => {
+    element.addEventListener("click", () => {
+      let temp = [];
+      rows.forEach((x) => temp.push(x.innerText));
+      console.log(temp);
+    });
+  });
+
+  // console.log(sortUps);
+  // console.log(rows);
+}
+
+function createCheckbox(cell, value) {
   let checkbox = document.createElement("input");
   checkbox.type = "checkbox";
   checkbox.value = value;
-  element.appendChild(checkbox);
+  cell.appendChild(checkbox);
 }
 
-function get2First(cell, element) {
-  if (element.split(" ").length > 2) {
-    cell.title = element;
-    cell.style.textDecoration = "underline";
+function periodToComma(value) {
+  return `R$ ${value.replace(".", ",")}`;
+}
 
-    return element
-      .split(" ", 2)
-      .join(" ")
-      .match(/^(\w+\s\w+)/)[0];
+function unitNotation(value) {
+  const quantity = value
+    .match(/[^a-z]/gi)
+    .join("")
+    .replace(/\s+/g, "");
+  let unit = value.match(/[a-z]/gi).join("").toUpperCase();
+  unit = isLiters(unit);
+  return quantity + unit;
+}
+
+function isLiters(unit) {
+  return unit != "L" ? unit.toLowerCase() : unit;
+}
+
+function formatDate(value) {
+  return new Date(value).toLocaleDateString("pt-BR");
+}
+
+function get2First(cell, value) {
+  if (value.split(" ").length > 2) {
+    cell.title = value;
+    cell.style.textDecoration = "underline";
+    cell.style.textDecorationColor = "orange";
+
+    return value.split(" ", 2).join(" ");
   } else {
-    return element;
+    return value;
   }
 }

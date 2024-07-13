@@ -136,7 +136,7 @@ td {
   width: max-content;
 }
 
-th {
+th > p {
   text-decoration: underline;
 }
 
@@ -149,6 +149,7 @@ th {
 }
 
 .row input {
+  cursor: pointer;
   margin-right: 6px;
 }
 
@@ -319,4 +320,21 @@ span {
 .warn {
   color: red;
   filter: brightness(2);
+}
+
+.tHeader {
+  display: flex;
+  gap: 4px;
+}
+
+.sortImgs {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.sortImgs > img {
+  cursor: pointer;
+  width: 10px;
 }
