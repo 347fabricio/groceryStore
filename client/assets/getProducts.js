@@ -34,6 +34,7 @@ export const setProducts = async () => {
 
       switch (x) {
         case 0:
+          // createParagraph(cell, products[row][columns[x]]);
           cell.innerText = products[row][columns[x]];
           createCheckbox(cell, products[row][columns[x]]);
           break;
@@ -57,26 +58,26 @@ export const setProducts = async () => {
           break;
         default:
           cell.innerText = products[row][columns[x]];
+        // createParagraph(cell, products[row][columns[x]]);
       }
     }
   }
-  orderID();
 };
 
-function orderID() {
-  const rows = document.querySelectorAll(".row > .id");
-  const sortUps = document.querySelectorAll(".sortUp");
+function createParagraph(cell, value) {
+  const p = document.createElement("p");
+  p.innerText = value;
+  cell.appendChild(p);
+}
 
-  sortUps.forEach((element, index) => {
-    element.addEventListener("click", () => {
-      let temp = [];
-      rows.forEach((x) => temp.push(x.innerText));
-      console.log(temp);
-    });
-  });
-
-  // console.log(sortUps);
-  // console.log(rows);
+function getAllAttributesOf(attribute) {
+  const list = document.querySelectorAll(`.${attribute}`);
+  // return list;
+  let arr = [];
+  for (let i = 0; i < list.length; i++) {
+    arr.push(list[i].firstChild);
+  }
+  return arr;
 }
 
 function createCheckbox(cell, value) {

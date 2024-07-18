@@ -141,10 +141,11 @@ th > p {
 }
 
 .row td:first-child {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
   direction: rtl;
-  text-align: end;
   border: none;
-  gap: 6px;
   width: max-content;
 }
 
@@ -338,3 +339,11 @@ span {
   cursor: pointer;
   width: 10px;
 }
+
+/* .id {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+  height: max-content;
+  width: max-content;
+} */

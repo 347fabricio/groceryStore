@@ -174,6 +174,7 @@ function createYear(element) {
   element.append(select);
 }
 
+let toggleDataSender = true;
 export const closeWindow = () => {
   const closeBtn = document.querySelector(".closeBtn");
   closeBtn.addEventListener("click", async () => {
