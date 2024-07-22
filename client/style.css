@@ -72,7 +72,8 @@ body {
 .delProductBtn,
 .btnSubmit,
 .updtProductBtn,
-.todaysDateBtn {
+.todaysDateBtn,
+.expiredProductBtn {
   cursor: pointer;
   font-weight: bold;
   font-size: 12px;
@@ -102,12 +103,19 @@ body {
   border: 2px solid #0e5faf; */
 }
 
+.expiredProductBtn {
+  color: #ffdb00;
+  /* background-color: #3583d1;
+  border: 2px solid #0e5faf; */
+}
+
 .addProductBtn:active,
 .delProductBtn:active,
 .updtProductBtn:active,
 .btnSubmit:active,
 .closeBtn:active,
-.todaysDateBtn:active {
+.todaysDateBtn:active,
+.expiredProductBtn:active {
   transform: translateY(1px);
 }
 
@@ -116,7 +124,8 @@ body {
 .updtProductBtn:hover,
 .btnSubmit:hover,
 .closeBtn:hover,
-.todaysDateBtn:hover {
+.todaysDateBtn:hover,
+.expiredProductBtn:hover {
   background-color: var(--btnHover-color);
 }
 
@@ -337,6 +346,7 @@ span {
 
 .sortImgs > img {
   cursor: pointer;
+  margin: 1px;
   width: 10px;
 }
 
@@ -347,3 +357,7 @@ span {
   height: max-content;
   width: max-content;
 } */
+
+.expiredProduct {
+  background-color: #db6f72;
+}

@@ -33,8 +33,18 @@ export const order = () => {
 
 function ascendingOrder(rows, index) {
   switch (index) {
+    case 0:
+    case 1:
+    case 4:
+    case 6:
+      sortAscending[index] = 1;
+      const getName = (tr) => tr.children[index].textContent;
+      rows.sort((a, b) => getName(a).localeCompare(getName(b), "pt-BR", { numeric: true }) * sortAscending[index]);
+      rows.forEach((tr) => myTable.appendChild(tr));
+      break;
+
     case 2:
-      sortAscending[index] = 1; // ascending order
+      sortAscending[index] = 1;
       const getPrice = (tr) => tr.children[index].textContent.replace(/^R\D/, "").replace(",", ".");
       rows.sort((a, b) => getPrice(a).localeCompare(getPrice(b), "pt-BR", { numeric: true }) * sortAscending[index]);
       rows.forEach((tr) => myTable.appendChild(tr));
@@ -43,9 +53,8 @@ function ascendingOrder(rows, index) {
     case 5:
     case 7:
     case 8:
-      sortAscending[index] = 1; // ascending order
+      sortAscending[index] = 1;
       const getDate = (tr) => {
-        // sortAscending[index] = 1; // ascending order
         const date = tr.children[index].textContent.split("/");
         let temp;
         temp = date[0];
@@ -57,20 +66,29 @@ function ascendingOrder(rows, index) {
       rows.forEach((tr) => myTable.appendChild(tr));
       break;
 
-    default:
-      sortAscending[index] = 1; // ascending order
+    case 9:
+      sortAscending[index] = 1;
       const getText = (tr) => tr.children[index].textContent;
-      rows.sort((a, b) => getText(a).localeCompare(getText(b), "pt-BR", { numeric: true }) * sortAscending[index]);
+      rows.sort((a, b) => getText(a).localeCompare(getText(b)));
       rows.forEach((tr) => myTable.appendChild(tr));
       break;
   }
-  console.log(sortAscending);
 }
 
 function descendingOrder(rows, index) {
   switch (index) {
+    case 0:
+    case 1:
+    case 4:
+    case 6:
+      sortAscending[index] = -1;
+      const getName = (tr) => tr.children[index].textContent;
+      rows.sort((a, b) => getName(a).localeCompare(getName(b), "pt-BR", { numeric: true }) * sortAscending[index]);
+      rows.forEach((tr) => myTable.appendChild(tr));
+      break;
+
     case 2:
-      sortAscending[index] = -1; // descending order
+      sortAscending[index] = -1;
       const getPrice = (tr) => tr.children[index].textContent.replace(/^R\D/, "").replace(",", ".");
       rows.sort((a, b) => getPrice(a).localeCompare(getPrice(b), "pt-BR", { numeric: true }) * sortAscending[index]);
       rows.forEach((tr) => myTable.appendChild(tr));
@@ -79,9 +97,8 @@ function descendingOrder(rows, index) {
     case 5:
     case 7:
     case 8:
-      sortAscending[index] = -1; // descending order
+      sortAscending[index] = -1;
       const getDate = (tr) => {
-        // sortAscending[index] = 1; // ascending order
         const date = tr.children[index].textContent.split("/");
         let temp;
         temp = date[0];
@@ -93,12 +110,11 @@ function descendingOrder(rows, index) {
       rows.forEach((tr) => myTable.appendChild(tr));
       break;
 
-    default:
-      sortAscending[index] = -1; // descending order
+    case 9:
+      sortAscending[index] = -1;
       const getText = (tr) => tr.children[index].textContent;
-      rows.sort((a, b) => getText(a).localeCompare(getText(b), "pt-BR", { numeric: true }) * sortAscending[index]);
+      rows.sort((a, b) => getText(b).localeCompare(getText(a)));
       rows.forEach((tr) => myTable.appendChild(tr));
       break;
   }
-  console.log(sortAscending);
 }

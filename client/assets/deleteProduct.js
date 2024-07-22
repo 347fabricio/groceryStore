@@ -8,7 +8,6 @@ export const deleteProduct = () => {
     if (isChecked.length) {
       deleteChecked(isChecked);
     } else {
-      console.log(isChecked.length);
       flashWarning();
     }
   });

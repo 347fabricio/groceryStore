@@ -11,33 +11,19 @@ let inputMadeOn;
 let inputExpiresOn;
 let inputDescription;
 
+let inputs;
+
 function getInputs() {
-  inputName = document.querySelector(".inputName > input");
-  inputMadeBy = document.querySelector(".inputMadeBy > input");
-  inputQuantity = document.querySelector(".inputQuantity > input");
-  inputPrice = document.querySelector(".inputPrice > input");
-  inputUnit = document.querySelector(".inputUnit > input");
-  inputPurchaseDate = document.querySelector(".inputPurchaseDate > .date");
-  inputMadeOn = document.querySelector(".inputMadeOn > .date");
-  inputExpiresOn = document.querySelector(".inputExpiresOn > .date");
-  inputDescription = document.querySelector(".inputDescription");
+  const inputs = document.querySelectorAll(
+    ".inputName > input, .inputMadeBy > input, .inputQuantity > input, .inputPrice > input, .inputUnit > input, .inputPurchaseDate > .date, .inputMadeOn > .date, .inputExpiresOn > .date, .inputDescription"
+  );
+  return Array.from(inputs).map((input) => input);
+  // };
 }
 
 export const getEmpty = () => {
-  getInputs();
-  let inputs = [
-    inputName,
-    inputMadeBy,
-    inputQuantity,
-    inputPrice,
-    inputUnit,
-    inputPurchaseDate,
-    inputMadeOn,
-    inputExpiresOn,
-    inputDescription,
-  ];
+  inputs = getInputs();
 
-  console.log(inputs[0].children);
   abortLoop: for (let i = 0; i < inputs.length; i++) {
     if (inputs[i].children.length) {
       const breakLoop = isDateFilled(inputs, i);
@@ -66,54 +52,64 @@ const changeBorderColor = (element) => {
 };
 
 const getPurchaseDate = () => {
-  let date = inputPurchaseDate;
+  let date = inputs[5];
   let day = date.querySelector(".day").value;
   let month = date.querySelector(".month").value;
   let year = date.querySelector(".year").value;
 
   if (day && month && year) {
-    Object.assign(productDetails, { purchasedate: `${month}-${day}-${year}` }); //postgres
+    Object.assign(productDetails, { purchasedate: `${year}-${month}-${day}` }); //postgres
   }
 };
+// ${year}-${month}-${day}
 
 const getMadeOn = () => {
-  let date = inputMadeOn;
+  let date = inputs[6];
   let day = date.querySelector(".day").value;
   let month = date.querySelector(".month").value;
   let year = date.querySelector(".year").value;
 
   if (day && month && year) {
-    Object.assign(productDetails, { madeon: `${month}-${day}-${year}` }); //postgres
+    Object.assign(productDetails, { madeon: `${year}-${month}-${day}` }); //postgres
   }
 };
 
 const getExpiresOn = () => {
-  let date = inputExpiresOn;
+  let date = inputs[7];
   let day = date.querySelector(".day").value;
   let month = date.querySelector(".month").value;
   let year = date.querySelector(".year").value;
 
   if (day && month && year) {
-    Object.assign(productDetails, { expireson: `${month}-${day}-${year}` }); //postgres
+    Object.assign(productDetails, { expireson: `${year}-${month}-${day}` }); //postgres
   }
 };
 
+const inputPriceHandler = () => {
+  const inputPrice = inputs[3];
+  inputPrice.value = inputPrice.value.replace(",", ".");
+
+  return Object.assign(productDetails, { price: inputs[3].value }); //postgres
+};
+
 const setValues = () => {
-  Object.assign(productDetails, { name: inputName.value });
+  Object.assign(productDetails, { name: inputs[0].value });
 
-  Object.assign(productDetails, { price: inputPrice.value });
+  // Object.assign(productDetails, { price: inputPrice.value });
+  inputPriceHandler();
 
-  Object.assign(productDetails, { unit: inputUnit.value });
+  Object.assign(productDetails, { unit: inputs[4].value });
 
-  Object.assign(productDetails, { quantity: inputQuantity.value });
+  Object.assign(productDetails, { quantity: inputs[2].value });
 
-  Object.assign(productDetails, { madeby: inputMadeBy.value });
+  Object.assign(productDetails, { madeby: inputs[1].value });
 
-  Object.assign(productDetails, { description: inputDescription.value });
+  Object.assign(productDetails, { description: inputs[8].value });
 
   getPurchaseDate();
   getMadeOn();
   getExpiresOn();
+  console.log(productDetails);
 };
 
 function isDateFilled(element, index) {

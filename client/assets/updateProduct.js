@@ -1,5 +1,5 @@
 import { getEmpty, productDetails } from "./filledChecker.js";
-import { dataSenderWindow } from "./dataSenderWindow .js";
+import { dataSenderWindow } from "./dataSenderWindow.js";
 import { flashWarning } from "./deleteProduct.js";
 
 const updateButton = document.querySelector(".updtProductBtn");

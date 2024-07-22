@@ -3,6 +3,7 @@ import { newProduct } from "./assets/newProduct.js";
 import { deleteProduct } from "./assets/deleteProduct.js";
 import { updateProduct } from "./assets/updateProduct.js";
 import { order } from "./assets/w3schoolsSort.js";
+import { expiredProducts } from "./assets/expiredProducts.js";
 
 window.onload = () => {
   setProducts();
@@ -10,4 +11,5 @@ window.onload = () => {
   deleteProduct();
   updateProduct();
   order();
+  expiredProducts();
 };

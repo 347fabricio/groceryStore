@@ -1,22 +1,14 @@
 import { getEmpty, productDetails } from "./filledChecker.js";
-import { dataSenderWindow, closeWindow } from "./dataSenderWindow .js";
+import { dataSenderWindow, closeWindow } from "./dataSenderWindow.js";
 const addProduct = document.querySelector("#addProduct");
 const container = document.querySelector(".container");
 
-let toggleDataSender = false;
-
 export const newProduct = () => {
   addProduct.addEventListener("click", async () => {
-    toggleDataSender = !toggleDataSender;
-    if (toggleDataSender) {
-      container.classList.add("dataSenderOpened");
-      dataSenderWindow();
-      closeWindow();
-      sendData();
-    } else {
-      container.classList.remove("dataSenderOpened");
-      document.querySelector(".dataSender").remove();
-    }
+    container.classList.add("dataSenderOpened");
+    dataSenderWindow();
+    closeWindow();
+    sendData();
   });
 };
 
