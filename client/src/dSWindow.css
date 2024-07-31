@@ -1,0 +1,33 @@
+#dSWindow {
+  background-color: #1b1f22;
+  max-width: 600px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#dateContainer > label,
+#inputMadeOn > label,
+#inputExpiresOn > label {
+  width: 126px;
+}
+
+#btnSubmit {
+  width: 128px;
+}
+
+#alertWarning {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  animation: fadeOut 5s forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

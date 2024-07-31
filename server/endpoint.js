@@ -5,7 +5,8 @@ const port = 5000;
 
 app.listen(port, () => console.log("Listening..."));
 app.use(express.json());
-app.use(express.static("../client"));
+app.use(express.static("../client/public"));
+app.use(express.static("../client/src"));
 
 // ---------- START ----------
 
