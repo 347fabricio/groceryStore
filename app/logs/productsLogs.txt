@@ -1,0 +1,84 @@
+06/09/2024	16:43:09	3eced870-6c88-11ef-914e-e551f33a8999 | Product Arrooooz was inserted.
+10/09/2024	09:46:56	c36d2680-6f72-11ef-8e4b-8dcc382b6bfe | Product Arrooooz was added by .undefined
+10/09/2024	09:48:03	eb538950-6f72-11ef-b063-fd0968626c6e | Product Arrooooz was added by undefined
+10/09/2024	09:50:04	331d86f0-6f73-11ef-bfce-35615a7ca3e6 | Product Arrooooz was added by undefined
+10/09/2024	09:50:38	47d57b70-6f73-11ef-942b-af76b8a23c93 | Product Arrooooz was added by undefined
+10/09/2024	09:50:55	51bfef30-6f73-11ef-86ff-697e41423271 | Product Arrooooz was added by biciogamer1
+10/09/2024	10:00:11	9d613e20-6f74-11ef-b76c-e51526f18453 | Product 19-Arroz was updated by biciogamer1.
+10/09/2024	10:01:51	d8990090-6f74-11ef-bab7-292abc2de8b2 | Product ID:19[Arroz] was updated by biciogamer1.
+10/09/2024	10:02:11	e4ed6f70-6f74-11ef-8db8-e3999289fade | Product ID: 19-[Arroz] was updated by biciogamer1.
+10/09/2024	10:02:30	efead9d0-6f74-11ef-a11f-f97d218652e4 | Product ID: 19 - [Arroz] was updated by biciogamer1.
+10/09/2024	10:02:58	00841e50-6f75-11ef-b260-938469e291b4 | Product ID: 19[Arroz] was updated by biciogamer1.
+10/09/2024	10:06:44	87a1a830-6f75-11ef-8688-f7e60698a3a8 | Product ID: 19 was deleted by biciogamer1.
+10/09/2024	10:06:44	87a1cf40-6f75-11ef-8688-f7e60698a3a8 | Product ID: 20 was deleted by biciogamer1.
+[DELETE] - 10/09/2024	10:17:45	112ba8c0-6f77-11ef-95a7-37ea3e219383 | Product ID: 19 was deleted by biciogamer1.
+[DELETE] - 10/09/2024	10:17:45	112c1df0-6f77-11ef-95a7-37ea3e219383 | Product ID: 20 was deleted by biciogamer1.
+[PUT] - 10/09/2024	11:00:15	017b2ee0-6f7d-11ef-9257-7b79e50d4942 | Product ID: 19[Arroz] was updated by biciogamer1.
+[PUTT] - 10/09/2024	11:00:34	0c684590-6f7d-11ef-87a9-452fa0385fe1 | Product ID: 19[Arroz] was updated by biciogamer1.
+[UNKNOWN] - 10/09/2024	11:00:56	199c3f00-6f7d-11ef-9e6a-bf47e12b4d4a | Product ID: 19[Arroz] was updated by biciogamer1.
+[POST] - 10/09/2024	11:01:42	35349b90-6f7d-11ef-b536-8b157dd7ccad | Product Arrooooz was added by biciogamer1
+[POST] - 10/09/2024	11:01:51	3a6c5cb0-6f7d-11ef-b536-8b157dd7ccad | Product Arrooooz was added by biciogamer1
+[DELETE] - 10/09/2024	11:47:34	9d72a570-6f83-11ef-ad73-911abfcdfeae | Product ID: 41 was deleted by biciogamer1.
+[DELETE] - 10/09/2024	11:47:44	a38f4850-6f83-11ef-ad73-911abfcdfeae | Product ID: 40 was deleted by biciogamer1.
+[PUT] - 11/09/2024	10:21:21	bc3dcf80-7040-11ef-9637-0d3a08f61352 | Product ID: 18[Chá] was updated by biciogamer1.
+[PUT] - 11/09/2024	10:22:13	db62d540-7040-11ef-bf18-3d0e8ff4d817 | Product ID: 12[Leite] was updated by biciogamer1.
+[PUT] - 11/09/2024	10:22:21	e036cb80-7040-11ef-bf18-3d0e8ff4d817 | Product ID: 12[Leite] was updated by biciogamer1.
+[PUT] - 11/09/2024	15:23:25	ef7b1540-706a-11ef-9fe4-5bee57ee64b0 | Product ID: 26[Tapiocao] was updated by biciogamer1.
+[PUT] - 11/09/2024	15:23:31	f2be3250-706a-11ef-9fe4-5bee57ee64b0 | Product ID: 26[Tapioca] was updated by biciogamer1.
+[POST] - 11/09/2024	15:25:13	2fa356a0-706b-11ef-a8aa-e1ac00e83a32 | Product Batata inglesa was added by biciogamer1
+[POST] - 11/09/2024	15:25:14	30772160-706b-11ef-a8aa-e1ac00e83a32 | Product Batata inglesa was added by biciogamer1
+[POST] - 11/09/2024	15:25:15	3093f830-706b-11ef-a8aa-e1ac00e83a32 | Product Batata inglesa was added by biciogamer1
+[POST] - 11/09/2024	15:25:15	30afbd90-706b-11ef-a8aa-e1ac00e83a32 | Product Batata inglesa was added by biciogamer1
+[DELETE] - 11/09/2024	15:30:15	e36d08c0-706b-11ef-aaf5-7d33bb8c92a4 | Product ID: 52 was deleted by biciogamer1.
+[DELETE] - 11/09/2024	15:30:15	e36d7df0-706b-11ef-aaf5-7d33bb8c92a4 | Product ID: 53 was deleted by biciogamer1.
+[DELETE] - 11/09/2024	15:30:15	e36da500-706b-11ef-aaf5-7d33bb8c92a4 | Product ID: 54 was deleted by biciogamer1.
+[DELETE] - 11/09/2024	15:30:32	edbcce00-706b-11ef-aaf5-7d33bb8c92a4 | Product ID: 54 was deleted by biciogamer1.
+[DELETE] - 11/09/2024	15:35:55	ae15fc30-706c-11ef-a236-73c23470ebb5 | Product ID: 51 was deleted by biciogamer1.
+[DELETE] - 11/09/2024	15:35:55	ae164a50-706c-11ef-a236-73c23470ebb5 | Product ID: 53 was deleted by biciogamer1.
+[POST] - 11/09/2024	15:37:38	ebdc31b0-706c-11ef-9594-bf69de150a6b | Product Batata doce was added by biciogamer1
+[DELETE] - 11/09/2024	15:37:46	f0511800-706c-11ef-9594-bf69de150a6b | Product ID: 53 was deleted by biciogamer1.
+[DELETE] - 11/09/2024	15:37:46	f0511801-706c-11ef-9594-bf69de150a6b | Product ID: 55 was deleted by biciogamer1.
+[POST] - 11/09/2024	15:39:54	3cf24030-706d-11ef-836c-595a6a389444 | Product Arrooooz was added by biciogamer1
+[DELETE] - 11/09/2024	15:40:03	421037c0-706d-11ef-836c-595a6a389444 | Product ID: 55 was deleted by biciogamer1.
+[DELETE] - 11/09/2024	15:40:03	42105ed0-706d-11ef-836c-595a6a389444 | Product ID: 56 was deleted by biciogamer1.
+[POST] - 11/09/2024	15:41:05	66dab490-706d-11ef-8fec-6debd3e30b3c | Product Arrooooz was added by biciogamer1
+[DELETE] - 11/09/2024	15:41:09	6971b320-706d-11ef-8fec-6debd3e30b3c | Product ID: 56 was deleted by biciogamer1.
+[DELETE] - 11/09/2024	15:41:09	6971da30-706d-11ef-8fec-6debd3e30b3c | Product ID: 57 was deleted by biciogamer1.
+[POST] - 11/09/2024	15:41:13	6bffb100-706d-11ef-8fec-6debd3e30b3c | Product Arrooooz was added by biciogamer1
+[POST] - 11/09/2024	15:41:14	6c8f6de0-706d-11ef-8fec-6debd3e30b3c | Product Arrooooz was added by biciogamer1
+[POST] - 11/09/2024	15:41:15	6d003110-706d-11ef-8fec-6debd3e30b3c | Product Arrooooz was added by biciogamer1
+[POST] - 11/09/2024	15:41:16	6d6b7600-706d-11ef-8fec-6debd3e30b3c | Product Arrooooz was added by biciogamer1
+[DELETE] - 11/09/2024	15:41:22	71825dd0-706d-11ef-8fec-6debd3e30b3c | Product ID: 58 was deleted by biciogamer1.
+[DELETE] - 11/09/2024	15:41:22	71825dd1-706d-11ef-8fec-6debd3e30b3c | Product ID: 59 was deleted by biciogamer1.
+[DELETE] - 11/09/2024	15:41:22	7182abf0-706d-11ef-8fec-6debd3e30b3c | Product ID: 60 was deleted by biciogamer1.
+[DELETE] - 11/09/2024	15:41:22	7182abf1-706d-11ef-8fec-6debd3e30b3c | Product ID: 61 was deleted by biciogamer1.
+[PUT] - 11/09/2024	15:53:45	2bf2ade0-706f-11ef-a0cb-c577463a874b | Product ID: 18[Chá] was updated by biciogamer1.
+[POST] - 11/09/2024	16:10:10	7714ec50-7071-11ef-89d3-9db1c4708509 | Product Arroz was added by biciogamer1
+[PUT] - 11/09/2024	16:11:09	9aa1e010-7071-11ef-9625-f7d8b9b0cb5e | Product ID: 62[Arroz Arroz] was updated by biciogamer1.
+[PUT] - 11/09/2024	16:11:32	a7ec20a0-7071-11ef-a728-17704de874f1 | Product ID: 62[Arroz Arroz] was updated by biciogamer1.
+[PUT] - 11/09/2024	16:15:17	2dec0580-7072-11ef-8607-81284bad8475 | Product ID: 62[Arroz Arroz] was updated by biciogamer1.
+[PUT] - 11/09/2024	16:15:32	36d6bc80-7072-11ef-8607-81284bad8475 | Product ID: 62[Arroz Arroz] was updated by biciogamer1.
+[DELETE] - 11/09/2024	16:15:39	3b40a650-7072-11ef-8607-81284bad8475 | Product ID: 62 was deleted by biciogamer1.
+[POST] - 12/09/2024	11:23:53	a3933ba0-7112-11ef-827f-9bb390cd2fee | Product Arroz was added by biciogamer1
+[DELETE] - 12/09/2024	11:27:55	33d1f5d0-7113-11ef-b857-2d8c4e2f8a82 | Product ID: 63 was deleted by biciogamer1.
+[PUT] - 12/09/2024	11:33:15	f2931ee0-7113-11ef-a82d-f5fc3c22e6ca | Product ID: 25[Tapioca] was updated by biciogamer1.
+[PUT] - 12/09/2024	11:33:15	f2947e70-7113-11ef-a82d-f5fc3c22e6ca | Product ID: 25[Tapioca] was updated by biciogamer1.
+[PUT] - 12/09/2024	11:33:22	f6719190-7113-11ef-a82d-f5fc3c22e6ca | Product ID: 25[Tapioca] was updated by biciogamer1.
+[POST] - 12/09/2024	16:07:27	40379100-713a-11ef-bd34-05d4b2e38012 | Product Arroz was added by biciogamer1
+[POST] - 12/09/2024	16:07:27	4037b810-713a-11ef-bd34-05d4b2e38012 | Product Arroz was added by biciogamer1
+[POST] - 12/09/2024	16:07:27	4037df20-713a-11ef-bd34-05d4b2e38012 | Product Arroz was added by biciogamer1
+[DELETE] - 12/09/2024	16:07:56	51a22f40-713a-11ef-bd34-05d4b2e38012 | Product ID: 65 was deleted by biciogamer1.
+[DELETE] - 12/09/2024	16:07:56	51a25650-713a-11ef-bd34-05d4b2e38012 | Product ID: 66 was deleted by biciogamer1.
+[POST] - 13/09/2024	11:31:48	e8bd7950-71dc-11ef-8754-b92027c7cb41 | Product Arrooooz was added by biciogamer1
+[POST] - 13/09/2024	11:33:58	368e20d0-71dd-11ef-8754-b92027c7cb41 | Product Arrooooz was added by biciogamer1
+[DELETE] - 13/09/2024	11:36:37	950ca640-71dd-11ef-8754-b92027c7cb41 | Product ID: 64 was deleted by biciogamer1.
+[DELETE] - 13/09/2024	11:36:37	950ccd50-71dd-11ef-8754-b92027c7cb41 | Product ID: 67 was deleted by biciogamer1.
+[DELETE] - 13/09/2024	11:36:37	950ccd51-71dd-11ef-8754-b92027c7cb41 | Product ID: 68 was deleted by biciogamer1.
+[POST] - 13/09/2024	11:36:43	98a97c10-71dd-11ef-8754-b92027c7cb41 | Product Arrooooz was added by biciogamer1
+[POST] - 13/09/2024	11:37:48	bf5710c0-71dd-11ef-8754-b92027c7cb41 | Product Arrooooz was added by biciogamer1
+[POST] - 13/09/2024	11:38:24	d4ff0a90-71dd-11ef-8754-b92027c7cb41 | Product Arrooooz was added by biciogamer1
+[DELETE] - 13/09/2024	11:38:32	d9eb1cb0-71dd-11ef-8754-b92027c7cb41 | Product ID: 70 was deleted by biciogamer1.
+[POST] - 13/09/2024	11:38:53	e6321e10-71dd-11ef-8754-b92027c7cb41 | Product Arrooooz was added by biciogamer1
+[DELETE] - 13/09/2024	11:38:58	e8f66e30-71dd-11ef-8754-b92027c7cb41 | Product ID: 71 was deleted by biciogamer1.
+[PUT] - 13/09/2024	16:04:06	f2c17340-7202-11ef-8978-5b703a04c68d | Product ID: 72[Arroz] was updated by biciogamer1.
+[PUT] - 13/09/2024	16:04:23	fce805a0-7202-11ef-8978-5b703a04c68d | Product ID: 69[Arroz] was updated by biciogamer1.

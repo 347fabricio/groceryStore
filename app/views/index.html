@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mercado Market</title>
+    <link rel="stylesheet" href="/bootstrapFiles/main.css" />
+    <link rel="stylesheet" href="/css/dataSenderWindow.css" />
+    <link rel="stylesheet" href="/css/style1.css" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+  </head>
+  <body class="bg-dark text-white">
+    <div class="container-fluid">
+      <div class="row">
+        <header id="header" class="col-12"></header>
+      </div>
+
+      <div id="content" class="row justify-content-center">
+        <!-- <section id="left-sidebar" class="col-1 p-1"></section> -->
+        <main id="main-content" class="col-10 p-1">
+          <table id="products" class="table table-dark table-hover small">
+            <thead>
+              <th id="id" class="py-0 px-1">
+                <div class="d-flex justify-content-between">
+                  ID
+                  <div class="sortImgs d-flex flex-column justify-content-evenly">
+                    <img src="/assets/svg/sortUp.svg" alt="" class="sortUp" />
+                    <img src="/assets/svg/sortDown.svg" alt="" class="sortDown" />
+                  </div>
+                </div>
+              </th>
+              <th id="name" class="py-0 px-1">
+                <div class="d-flex justify-content-between">
+                  Nome
+                  <div class="sortImgs d-flex flex-column justify-content-evenly">
+                    <img src="/assets/svg/sortUp.svg" alt="" class="sortUp" />
+                    <img src="/assets/svg/sortDown.svg" alt="" class="sortDown" />
+                  </div>
+                </div>
+              </th>
+              <th id="price" class="py-0 px-1">
+                <div class="d-flex justify-content-between">
+                  Preço
+                  <div class="sortImgs d-flex flex-column justify-content-evenly">
+                    <img src="/assets/svg/sortUp.svg" alt="" class="sortUp" />
+                    <img src="/assets/svg/sortDown.svg" alt="" class="sortDown" />
+                  </div>
+                </div>
+              </th>
+              <th id="unit" class="py-0 px-1">
+                <div class="d-flex justify-content-between">
+                  Tipo
+                  <div class="sortImgs d-flex flex-column justify-content-evenly">
+                    <img src="/assets/svg/sortUp.svg" alt="" class="sortUp" />
+                    <img src="/assets/svg/sortDown.svg" alt="" class="sortDown" />
+                  </div>
+                </div>
+              </th>
+              <th id="quantity" class="py-0 px-1">
+                <div class="d-flex justify-content-between">
+                  Qntd
+                  <div class="sortImgs d-flex flex-column justify-content-evenly">
+                    <img src="/assets/svg/sortUp.svg" alt="" class="sortUp" />
+                    <img src="/assets/svg/sortDown.svg" alt="" class="sortDown" />
+                  </div>
+                </div>
+              </th>
+              <th id="purchasedate" class="py-0 px-1">
+                <div class="d-flex justify-content-between">
+                  Comprado
+                  <div class="sortImgs d-flex flex-column justify-content-evenly">
+                    <img src="/assets/svg/sortUp.svg" alt="" class="sortUp" />
+                    <img src="/assets/svg/sortDown.svg" alt="" class="sortDown" />
+                  </div>
+                </div>
+              </th>
+              <th id="madeby" class="py-0 px-1">
+                <div class="d-flex justify-content-between">
+                  Feito por
+                  <div class="sortImgs d-flex flex-column justify-content-evenly">
+                    <img src="/assets/svg/sortUp.svg" alt="" class="sortUp" />
+                    <img src="/assets/svg/sortDown.svg" alt="" class="sortDown" />
+                  </div>
+                </div>
+              </th>
+              <th id="madeon" class="py-0 px-1">
+                <div class="d-flex justify-content-between">
+                  Feito em
+                  <div class="sortImgs d-flex flex-column justify-content-evenly">
+                    <img src="/assets/svg/sortUp.svg" alt="" class="sortUp" />
+                    <img src="/assets/svg/sortDown.svg" alt="" class="sortDown" />
+                  </div>
+                </div>
+              </th>
+              <th id="expireson" class="py-0 px-1">
+                <div class="d-flex justify-content-between">
+                  Vencimento
+                  <div class="sortImgs d-flex flex-column justify-content-evenly">
+                    <img src="/assets/svg/sortUp.svg" alt="" class="sortUp" />
+                    <img src="/assets/svg/sortDown.svg" alt="" class="sortDown" />
+                  </div>
+                </div>
+              </th>
+              <th id="description" class="py-0 px-1">
+                <div class="d-flex justify-content-between">
+                  Descrição
+                  <div class="sortImgs d-flex flex-column justify-content-evenly">
+                    <img src="/assets/svg/sortUp.svg" alt="" class="sortUp" />
+                    <img src="/assets/svg/sortDown.svg" alt="" class="sortDown" />
+                  </div>
+                </div>
+              </th>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </main>
+        <section id="right-sidebar" class="col-1 px-1">
+          <div id="btn-group" class="d-flex flex-column justify-content-evenly h-100">
+            <button type="button" class="btn btn-outline-success" id="addProductBtn">ADICIONAR PRODUTO</button>
+            <button type="button" class="btn btn-outline-danger" id="delProductBtn">REMOVER PRODUTO</button>
+            <button type="button" class="btn btn-outline-primary" id="updtProductBtn">ATUALIZAR PRODUTO</button>
+            <button type="button" class="btn btn-outline-warning" id="expiredProductBtn">PRODUTOS EXPIRADOS</button>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div id="dSWindow" class="container text-light d-none rounded">
+      <h1 class="p-2 m-0">Adicionar produto</h1>
+      <hr class="px-2 my-1" />
+      <form id="dataSender" class="row gap-1 mx-auto p-2 w-100">
+        <div id="inputContainer1" class="row p-0 m-0">
+          <div id="inputName" class="col ps-0 m-0">
+            <input type="text" class="form-control form-control-sm" placeholder="Nome" maxlength="63" />
+          </div>
+          <div id="inputMadeBy" class="col ps-0 m-0">
+            <input type="text" class="form-control form-control-sm" placeholder="Feito por" maxlength="31" />
+          </div>
+        </div>
+
+        <div id="inputContainer2" class="row">
+          <div id="inputQuantity" class="col-3 ps-0 m-0">
+            <input type="number" class="form-control form-control-sm" placeholder="Quantidade" min="1" max="999" />
+          </div>
+          <div id="inputPrice" class="col-3 ps-0 m-0">
+            <input type="text" class="form-control form-control-sm" placeholder="Preço" minlength="1" maxlength="7" />
+          </div>
+          <div id="inputUnit" class="col-6 ps-0 m-0">
+            <input type="text" class="form-control form-control-sm" placeholder="Tipo" minlength="1" maxlength="31" />
+          </div>
+        </div>
+
+        <div id="dateContainer" class="row gap-1">
+          <div id="inputPurchaseDate" class="d-flex p-0 m-0">
+            <label for="day0" class="pe-2">Data de compra: </label>
+            <div id="date" class="d-flex gap-1 w-50">
+              <select id="day0" class="day form-select form-select-sm py-0">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+              </select>
+              <select class="month form-select form-select-sm py-0">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+              </select>
+              <select class="year form-select form-select-sm py-0">
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+                <option value="2027">2027</option>
+                <option value="2028">2028</option>
+                <option value="2029">2029</option>
+                <option value="2030">2030</option>
+              </select>
+            </div>
+            <button type="button" id="todaysDateBtn" class="btn btn-sm btn-primary ms-2 py-0">HOJE</button>
+          </div>
+
+          <div id="inputMadeOn" class="d-flex p-0 m-0 w-100">
+            <label for="day1" class="pe-2">Feito em: </label>
+            <div id="date" class="d-flex gap-1 w-50">
+              <select id="day1" class="day form-select form-select-sm py-0">
+                <option></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+              </select>
+              <select class="month form-select form-select-sm py-0">
+                <option></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+              </select>
+              <select class="year form-select form-select-sm py-0">
+                <option></option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+                <option value="2027">2027</option>
+                <option value="2028">2028</option>
+                <option value="2029">2029</option>
+                <option value="2030">2030</option>
+              </select>
+            </div>
+          </div>
+
+          <div id="inputExpiresOn" class="d-flex p-0 m-0">
+            <label for="day2" class="pe-2">Vence em: </label>
+            <div id="date" class="d-flex gap-1 w-50">
+              <select id="day2" class="day form-select form-select-sm py-0">
+                <option></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+              </select>
+              <select class="month form-select form-select-sm py-0">
+                <option></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+              </select>
+              <select class="year form-select form-select-sm py-0">
+                <option></option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+                <option value="2027">2027</option>
+                <option value="2028">2028</option>
+                <option value="2029">2029</option>
+                <option value="2030">2030</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div id="descriptionContainer" class="p-0">
+          <textarea
+            maxlength="31"
+            id="inputDescription"
+            class="form-control form-select-sm"
+            rows="1"
+            placeholder="Descrição"></textarea>
+        </div>
+        <button type="submit" id="btnSubmit" class="btn btn-sm btn-success mx-auto py-0">ENVIAR</button>
+      </form>
+      <button id="closeBtn" class="btn btn-sm btn-danger">
+        <img src="assets/svg/close.svg" />
+      </button>
+    </div>
+
+    <div id="expiredOnes" class="container d-none rounded position-absolute top-50 start-50 translate-middle">
+      <div class="row justify-content-center">
+        <div class="col-10 p-1">
+          <table id="expiredProducts" class="table table-dark table-hover small">
+            <thead>
+              <th id="id" class="py-0 px-1">
+                <div class="d-flex justify-content-between">
+                  ID
+                  <div class="sortImgs d-flex flex-column justify-content-evenly">
+                    <img src="/assets/svg/sortUp.svg" alt="" class="sortUp" />
+                    <img src="/assets/svg/sortDown.svg" alt="" class="sortDown" />
+                  </div>
+                </div>
+              </th>
+              <th id="name" class="py-0 px-1">
+                <div class="d-flex justify-content-between">
+                  Nome
+                  <div class="sortImgs d-flex flex-column justify-content-evenly">
+                    <img src="/assets/svg/sortUp.svg" alt="" class="sortUp" />
+                    <img src="/assets/svg/sortDown.svg" alt="" class="sortDown" />
+                  </div>
+                </div>
+              </th>
+              <th id="price" class="py-0 px-1">
+                <div class="d-flex justify-content-between">
+                  Preço
+                  <div class="sortImgs d-flex flex-column justify-content-evenly">
+                    <img src="/assets/svg/sortUp.svg" alt="" class="sortUp" />
+                    <img src="/assets/svg/sortDown.svg" alt="" class="sortDown" />
+                  </div>
+                </div>
+              </th>
+              <th id="unit" class="py-0 px-1">
+                <div class="d-flex justify-content-between">
+                  Tipo
+                  <div class="sortImgs d-flex flex-column justify-content-evenly">
+                    <img src="/assets/svg/sortUp.svg" alt="" class="sortUp" />
+                    <img src="/assets/svg/sortDown.svg" alt="" class="sortDown" />
+                  </div>
+                </div>
+              </th>
+              <th id="quantity" class="py-0 px-1">
+                <div class="d-flex justify-content-between">
+                  Qntd
+                  <div class="sortImgs d-flex flex-column justify-content-evenly">
+                    <img src="/assets/svg/sortUp.svg" alt="" class="sortUp" />
+                    <img src="/assets/svg/sortDown.svg" alt="" class="sortDown" />
+                  </div>
+                </div>
+              </th>
+              <th id="purchasedate" class="py-0 px-1">
+                <div class="d-flex justify-content-between">
+                  Comprado
+                  <div class="sortImgs d-flex flex-column justify-content-evenly">
+                    <img src="/assets/svg/sortUp.svg" alt="" class="sortUp" />
+                    <img src="/assets/svg/sortDown.svg" alt="" class="sortDown" />
+                  </div>
+                </div>
+              </th>
+              <th id="madeby" class="py-0 px-1">
+                <div class="d-flex justify-content-between">
+                  Feito por
+                  <div class="sortImgs d-flex flex-column justify-content-evenly">
+                    <img src="/assets/svg/sortUp.svg" alt="" class="sortUp" />
+                    <img src="/assets/svg/sortDown.svg" alt="" class="sortDown" />
+                  </div>
+                </div>
+              </th>
+              <th id="madeon" class="py-0 px-1">
+                <div class="d-flex justify-content-between">
+                  Feito em
+                  <div class="sortImgs d-flex flex-column justify-content-evenly">
+                    <img src="/assets/svg/sortUp.svg" alt="" class="sortUp" />
+                    <img src="/assets/svg/sortDown.svg" alt="" class="sortDown" />
+                  </div>
+                </div>
+              </th>
+              <th id="expireson" class="py-0 px-1">
+                <div class="d-flex justify-content-between">
+                  Vencimento
+                  <div class="sortImgs d-flex flex-column justify-content-evenly">
+                    <img src="/assets/svg/sortUp.svg" alt="" class="sortUp" />
+                    <img src="/assets/svg/sortDown.svg" alt="" class="sortDown" />
+                  </div>
+                </div>
+              </th>
+              <th id="description" class="py-0 px-1">
+                <div class="d-flex justify-content-between">
+                  Descrição
+                  <div class="sortImgs d-flex flex-column justify-content-evenly">
+                    <img src="/assets/svg/sortUp.svg" alt="" class="sortUp" />
+                    <img src="/assets/svg/sortDown.svg" alt="" class="sortDown" />
+                  </div>
+                </div>
+              </th>
+            </thead>
+            <tbody></tbody>
+          </table>
+          <button id="closeBtn" class="btn btn-sm btn-danger">
+            <img src="assets/svg/close.svg" />
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="alertWarning"
+      class="alert alert-warning d-none w-50 position-absolute mb-1 bottom-0 end-0 translate-middle-x"></div>
+  </body>
+  <script src="/js/index.js" type="module"></script>
+</html>

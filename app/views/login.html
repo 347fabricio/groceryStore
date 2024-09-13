@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="/bootstrapFiles/main.css" type="text/css" />
+  </head>
+  <body class="bg-black">
+    <section class="vh-100">
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+            <div class="card bg-dark text-white" style="border-radius: 1rem">
+              <div class="card-body p-5 text-center">
+                <div class="my-2 pb-5">
+                  <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
+                  <p class="text-white-50 mb-5">Please enter your login and password!</p>
+                  <form id="loginForm" action="/login" method="post">
+                    <div class="form-outline form-white mb-3">
+                      <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        class="form-control form-control-lg"
+                        placeholder="Username"
+                        value="biciogamer1" />
+                    </div>
+
+                    <div class="form-outline form-white mb-3">
+                      <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        class="form-control form-control-lg"
+                        placeholder="Password"
+                        value="password" />
+                    </div>
+                    <button id="loginBtn" class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
+                  </form>
+                </div>
+                <div>
+                  <p class="mb-0">
+                    Don't have an account?
+                    <a
+                      href="/register"
+                      class="text-white-50 fw-bold link-underline-light link-underline-opacity-50 link-underline-opacity-75-hover"
+                      >Sign Up</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="/js/login.js" type="module"></script>
+</html>
