@@ -1,6 +1,15 @@
 import { pool } from "./database.js";
 
 export class Model {
+  async selectExpiresOnes() {
+    const { rows: response } =
+      await pool.query(`SELECT * FROM (SELECT id, expireson - CURRENT_DATE AS difference FROM products) WHERE difference < 31 ORDER BY difference DESC; 
+`);
+    let id = response.map((x) => x.id);
+    let difference = response.map((x) => x.difference);
+    return { id, difference };
+  }
+
   async selectAllProducts() {
     const { rows: response } = await pool.query(`SELECT * FROM products`);
     return response;

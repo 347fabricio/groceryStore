@@ -1,4 +1,11 @@
 class ApiConnector {
+  async getExpiredOnes() {
+    const request = await fetch("http://localhost:5000/api/expired", {
+      method: "GET",
+    });
+    return await request.json();
+  }
+
   async getX(id) {
     const request = await fetch(`http://localhost:5000/api/product/${id}`, {
       method: "GET",
@@ -33,15 +40,12 @@ class ApiConnector {
   }
 
   async delete(id) {
-    let really = confirm(`Você quer excluir este(s) produto(s?`);
-    if (really) {
-      const request = await fetch(`http://localhost:5000/api/product`, {
-        method: "DELETE",
-        headers: { "Content-Type": "application/json; charset=utf-8" },
-        body: JSON.stringify(id),
-      });
-      return await request.json();
-    }
+    const request = await fetch(`http://localhost:5000/api/product`, {
+      method: "DELETE",
+      headers: { "Content-Type": "application/json; charset=utf-8" },
+      body: JSON.stringify(id),
+    });
+    return await request.json();
   }
 }
 

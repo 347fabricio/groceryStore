@@ -11,9 +11,11 @@
   max-width: 20px;
 }
 
-#main-content,
-.pTable {
-  max-width: 900px;
+#main-content {
+  max-width: 960px;
+  height: 100vh;
+  scrollbar-width: thin;
+  scrollbar-color: #212529 #424242;
 }
 
 #btn-group > button {
@@ -52,6 +54,10 @@ input[type="checkbox"] {
   padding-bottom: 16px;
 }
 
+#expiredOnes {
+  width: 1200px;
+}
+
 #expiredProducts {
   max-width: 900px;
 }
@@ -67,37 +73,4 @@ input[type="checkbox"] {
   position: absolute;
   right: -2px;
   top: -2px;
-}
-
-.circle {
-  display: block;
-  position: relative;
-  right: -2px;
-  border-radius: 100%;
-  height: 16px;
-  width: 16px;
-  margin: 0;
-}
-
-.lessThan31 {
-  background-color: #ffda3c !important;
-  border: 2px solid #756c00;
-}
-
-.lessThan15 {
-  background-color: #f48a27 !important;
-  border: 2px solid #754000;
-}
-
-.lessThan0 {
-  background-color: #e32624 !important;
-  border: 2px solid #750200;
-}
-
-/* .table-hover > tbody > tr > .circle:hover {
-  background-color: #ffffff;
-} */
-
-.table-hover > tbody > tr:hover > td {
-  background-color: unset !important;
 }

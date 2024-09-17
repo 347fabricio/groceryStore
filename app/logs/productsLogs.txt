@@ -82,3 +82,43 @@
 [DELETE] - 13/09/2024	11:38:58	e8f66e30-71dd-11ef-8754-b92027c7cb41 | Product ID: 71 was deleted by biciogamer1.
 [PUT] - 13/09/2024	16:04:06	f2c17340-7202-11ef-8978-5b703a04c68d | Product ID: 72[Arroz] was updated by biciogamer1.
 [PUT] - 13/09/2024	16:04:23	fce805a0-7202-11ef-8978-5b703a04c68d | Product ID: 69[Arroz] was updated by biciogamer1.
+[DELETE] - 16/09/2024	16:21:28	dfa57620-7460-11ef-ae79-93d1f79afb9c | Product ID: 26 was deleted by biciogamer1.
+[DELETE] - 17/09/2024	07:05:11	53d5c380-74dc-11ef-8edf-05120051c69c | Product ID: 72 was deleted by biciogamer1.
+[POST] - 17/09/2024	07:18:17	280ac190-74de-11ef-9db9-6753ebec3728 | Product Feijão was added by biciogamer1
+[POST] - 17/09/2024	07:18:30	2fa307f0-74de-11ef-9db9-6753ebec3728 | Product Açúcar was added by biciogamer1
+[POST] - 17/09/2024	07:18:33	31919180-74de-11ef-9db9-6753ebec3728 | Product Café was added by biciogamer1
+[POST] - 17/09/2024	07:18:37	33eb8710-74de-11ef-9db9-6753ebec3728 | Product Leite was added by biciogamer1
+[POST] - 17/09/2024	07:18:41	36201a50-74de-11ef-9db9-6753ebec3728 | Product Pão was added by biciogamer1
+[POST] - 17/09/2024	07:18:55	3ea61c10-74de-11ef-9db9-6753ebec3728 | Product Ovos was added by biciogamer1
+[POST] - 17/09/2024	07:18:59	41444690-74de-11ef-9db9-6753ebec3728 | Product Queijo was added by biciogamer1
+[POST] - 17/09/2024	07:19:04	43fadb10-74de-11ef-9db9-6753ebec3728 | Product Azeite was added by biciogamer1
+[POST] - 17/09/2024	07:19:08	46b42eb0-74de-11ef-9db9-6753ebec3728 | Product Pão Integral was added by biciogamer1
+[POST] - 17/09/2024	07:19:14	49d9ffc0-74de-11ef-9db9-6753ebec3728 | Product Cereais was added by biciogamer1
+[POST] - 17/09/2024	07:19:34	55d83850-74de-11ef-9db9-6753ebec3728 | Product Tomate was added by biciogamer1
+[POST] - 17/09/2024	07:19:38	5810ea40-74de-11ef-9db9-6753ebec3728 | Product Cebola was added by biciogamer1
+[POST] - 17/09/2024	07:19:41	5a5eaad0-74de-11ef-9db9-6753ebec3728 | Product Alho was added by biciogamer1
+[POST] - 17/09/2024	07:19:45	5c6b1ca0-74de-11ef-9db9-6753ebec3728 | Product Pimentão was added by biciogamer1
+[POST] - 17/09/2024	07:19:49	5eac5a10-74de-11ef-9db9-6753ebec3728 | Product Abacate was added by biciogamer1
+[POST] - 17/09/2024	07:19:58	64190de0-74de-11ef-9db9-6753ebec3728 | Product Iogurte was added by biciogamer1
+[POST] - 17/09/2024	07:20:01	6600b9a0-74de-11ef-9db9-6753ebec3728 | Product Manteiga was added by biciogamer1
+[POST] - 17/09/2024	07:20:05	6860c9b0-74de-11ef-9db9-6753ebec3728 | Product Queijo Cottage was added by biciogamer1
+[POST] - 17/09/2024	07:20:09	6b0a8cf0-74de-11ef-9db9-6753ebec3728 | Product Leite de Coco was added by biciogamer1
+[POST] - 17/09/2024	07:20:14	6da69490-74de-11ef-9db9-6753ebec3728 | Product Açúcar Mascavo was added by biciogamer1
+[POST] - 17/09/2024	07:20:34	79a9d630-74de-11ef-9db9-6753ebec3728 | Product Iogurte was added by biciogamer1
+[POST] - 17/09/2024	07:20:38	7c0ca560-74de-11ef-9db9-6753ebec3728 | Product Manteiga was added by biciogamer1
+[POST] - 17/09/2024	07:20:41	7df69b10-74de-11ef-9db9-6753ebec3728 | Product Queijo Cottage was added by biciogamer1
+[POST] - 17/09/2024	07:20:45	803cba80-74de-11ef-9db9-6753ebec3728 | Product Leite de Coco was added by biciogamer1
+[POST] - 17/09/2024	07:20:49	8269d3b0-74de-11ef-9db9-6753ebec3728 | Product Açúcar Mascavo was added by biciogamer1
+[POST] - 17/09/2024	07:20:53	84c01fc0-74de-11ef-9db9-6753ebec3728 | Product Pão was added by biciogamer1
+[POST] - 17/09/2024	07:20:56	86a92b10-74de-11ef-9db9-6753ebec3728 | Product Café was added by biciogamer1
+[POST] - 17/09/2024	08:33:37	ae0a73d0-74e8-11ef-b015-d5d6e24f25cc | Product Arroz Branco was added by biciogamer1
+[POST] - 17/09/2024	08:33:40	afb71260-74e8-11ef-b015-d5d6e24f25cc | Product Ovos was added by biciogamer1
+[POST] - 17/09/2024	08:33:46	b35b8950-74e8-11ef-b015-d5d6e24f25cc | Product Açúcar Branco was added by biciogamer1
+[POST] - 17/09/2024	08:34:13	c39e2250-74e8-11ef-b015-d5d6e24f25cc | Product Leite Integral was added by biciogamer1
+[POST] - 17/09/2024	08:34:44	d650d0f0-74e8-11ef-b015-d5d6e24f25cc | Product Queijo Fresco was added by biciogamer1
+[POST] - 17/09/2024	08:34:50	d99b6810-74e8-11ef-b015-d5d6e24f25cc | Product Iogurte Natural was added by biciogamer1
+[POST] - 17/09/2024	08:34:58	de3eb160-74e8-11ef-b015-d5d6e24f25cc | Product Manteiga was added by biciogamer1
+[POST] - 17/09/2024	08:35:15	e8c0d140-74e8-11ef-b015-d5d6e24f25cc | Product Presunto was added by biciogamer1
+[POST] - 17/09/2024	08:35:19	eb26fbd0-74e8-11ef-b015-d5d6e24f25cc | Product Linguiça was added by biciogamer1
+[POST] - 17/09/2024	08:35:24	edbce8f0-74e8-11ef-b015-d5d6e24f25cc | Product Bacon was added by biciogamer1
+[PUT] - 17/09/2024	08:44:17	2b6fc810-74ea-11ef-b015-d5d6e24f25cc | Product ID: 85[Alho] was updated by biciogamer1.

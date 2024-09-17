@@ -16,6 +16,11 @@ class Controller {
     return await this.model.selectAProduct(id);
   }
 
+  async getExpiresOnes() {
+    const response = await this.model.selectExpiresOnes();
+    return response;
+  }
+
   async newProduct(product, user) {
     const response = await this.model.insertProduct(product);
     if (response.Error) return response;

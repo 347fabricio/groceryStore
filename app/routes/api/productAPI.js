@@ -7,6 +7,10 @@ import { productController } from "../../controllers/productController.js";
 
 router.use(middleware.requireUser);
 router
+  .get("/expired", async (req, res) => {
+    const response = await productController.getExpiresOnes();
+    res.json(response);
+  })
   .get("/product", async (req, res) => {
     const response = await productController.getProducts();
     res.json(response);

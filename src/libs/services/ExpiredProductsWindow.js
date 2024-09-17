@@ -1,11 +1,7 @@
-import "../../../node_modules/bootstrap/dist/js/bootstrap.bundle.js";
-import { format } from "../../../../node_modules/date-fns/format.mjs";
-import { parse } from "../../../../node_modules/date-fns/parse.mjs";
+import * as bootstrap from "bootstrap";
 
 class ExpiredProductsWindow {
   toPaint(element, exp) {
-    const ball = document.createElement("figure");
-
     switch (true) {
       case exp <= 0:
         [...element.children].forEach((child) => child.classList.add("opacity-25"));
@@ -47,16 +43,14 @@ class ExpiredProductsWindow {
     );
   }
 
-  isNearExpiration() {
-    const today = this.today();
-    const expiresOn = this.getExpiredProductDates();
-    const rows = document.querySelectorAll("#products  tbody tr");
-
-    expiresOn.map((product, index) => {
-      const isExpired = this.dateDiff(today, product);
-      if (isExpired <= 31) {
-        const newRow = rows[index].cloneNode(true);
-        this.toPaint(newRow, isExpired);
+  isNearExpiration(expiredProducts) {
+    const rows = document.querySelectorAll("#products tbody tr");
+    rows.forEach((x) => {
+      const target = x.querySelector("#id");
+      if (expiredProducts["id"].includes(+target.innerText)) {
+        const expiresIn = expiredProducts["difference"][expiredProducts["id"].indexOf(+target.innerText)];
+        const newRow = target.parentNode.cloneNode(true);
+        this.toPaint(newRow, expiresIn);
       }
     });
   }

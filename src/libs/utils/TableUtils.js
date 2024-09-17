@@ -14,16 +14,16 @@ class TableUtils {
     return new Date(value).toLocaleDateString("pt-BR");
   }
 
-  flashWarning() {
-    const element = document.querySelectorAll(".actionCheckbox");
+  flashWarning(element) {
+    const checkbox = document.querySelectorAll(`${element} .actionCheckbox`);
     let toggle = true;
 
     let blinkInterval = setInterval(() => {
       if (toggle) {
-        element.forEach((x) => x.parentNode.classList.add("warn"));
+        checkbox.forEach((x) => x.parentNode.classList.add("warn"));
         toggle = !toggle;
       } else {
-        element.forEach((x) => x.parentNode.classList.remove("warn"));
+        checkbox.forEach((x) => x.parentNode.classList.remove("warn"));
         toggle = !toggle;
       }
     }, 100);

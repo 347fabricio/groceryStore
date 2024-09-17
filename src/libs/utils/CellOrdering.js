@@ -13,39 +13,28 @@ class CellOrdering {
       9: 1,
     };
   }
-  order() {
-    // const this.cells = {
-    //   0: 1,
-    //   1: 1,
-    //   2: 1,
-    //   3: 1,
-    //   4: 1,
-    //   5: 1,
-    //   6: 1,
-    //   7: 1,
-    //   8: 1,
-    //   9: 1,
-    // };
-
-    const sortUp = document.querySelectorAll(".sortUp");
-    const sortDown = document.querySelectorAll(".sortDown");
+  order(parent) {
+    const sortUp = document.querySelectorAll(`#${parent} .sortUp`);
+    const sortDown = document.querySelectorAll(`#${parent} .sortDown`);
 
     sortUp.forEach((element, index) => {
       element.addEventListener("click", () => {
-        const trs = [...document.querySelectorAll(".tRow")];
-        this.ascendingOrder(trs, index);
+        const tableID = sortUp[index].closest("table").getAttribute("id");
+        const trs = [...document.querySelectorAll(`#${tableID} tbody tr`)];
+        this.ascendingOrder(trs, index, tableID);
       });
     });
     sortDown.forEach((element, index) => {
       element.addEventListener("click", () => {
-        const trs = [...document.querySelectorAll(".tRow")];
-        this.descendingOrder(trs, index);
+        const tableID = sortUp[index].closest("table").getAttribute("id");
+        const trs = [...document.querySelectorAll(`#${tableID} tbody tr`)];
+        this.descendingOrder(trs, index, tableID);
       });
     });
   }
 
-  ascendingOrder(rows, index) {
-    const table = document.querySelector("#products > tbody");
+  ascendingOrder(rows, index, tableID) {
+    const table = document.querySelector(`#${tableID} > tbody`);
     switch (index) {
       case 0:
       case 1:
@@ -89,8 +78,8 @@ class CellOrdering {
     }
   }
 
-  descendingOrder(rows, index) {
-    const table = document.querySelector("#products > tbody");
+  descendingOrder(rows, index, tableID) {
+    const table = document.querySelector(`#${tableID} > tbody`);
     switch (index) {
       case 0:
       case 1:

@@ -1,19 +1,21 @@
 import { tableUtils } from "../../utils/TableUtils.js";
 import { apiConnector } from "../../API/ApiConnector.js";
 
-const delProductBtn = document.querySelector("#delProductBtn");
-
-export default () => {
+export default (element) => {
+  const delProductBtn = document.querySelector(`${element} #delProductBtn`);
   delProductBtn.addEventListener("click", async () => {
-    let checkbox = document.querySelectorAll(".actionCheckbox:checked");
+    let checkbox = document.querySelectorAll(`${element} .actionCheckbox:checked`);
     let isChecked = [];
     checkbox.forEach((x) => isChecked.push(x.value));
 
     if (isChecked.length) {
-      const { reload } = await apiConnector.delete(isChecked);
-      if (reload) return location.reload();
+      let really = confirm(`Você quer excluir este(s) produto(s?`);
+      if (really) {
+        const { reload } = await apiConnector.delete(isChecked);
+        if (reload) return location.reload();
+      }
     } else {
-      tableUtils.flashWarning();
+      tableUtils.flashWarning(element);
     }
   });
 };
