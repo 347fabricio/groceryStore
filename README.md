@@ -1,3 +1,7 @@
-# groceryStore
+# Grocery Store Managment System
 
-Project of a grocery store
+A ideia central do software é facilitar o gerenciamento de produtos de uma mercearia. Facilitando a adicionar, remover e visualizar produtos prestes a expirar.
+
+## TODO
+
+- Barra de pesquisa
